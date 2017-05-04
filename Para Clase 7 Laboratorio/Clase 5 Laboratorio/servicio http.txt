@@ -1,0 +1,57 @@
+ng g serveice ./services/nombre
+
+x En app.module.ts
+
+import { DatosService } from './services/datos.service';
+
+providers: [DatosService],
+
+x En app.component.ts
+
+import { DatosService } from './services/datos.service';
+
+constructor(public datosService : DatosService)
+
+x En datos.service.ts
+
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+
+constructor(public http : Http)
+
+TraerDatos()
+  
+{
+    
+	//promise -> then (funciona), catch(no funciona)
+
+    	return this.http.get('http://www.romerofederico.hol.es/slimTrivia/ws/administracion.php/usuarios')
+      
+	.toPromise()
+
+	.then(this.ExtraerData)
+      
+	.catch(this.LanzarError);
+  
+}
+
+  
+
+private ExtraerData(response : Response)
+  
+{
+    
+return response.json() || {}; // Si no hay nada, devuelve la otra opcion, tambien JSON.
+  
+}
+
+  
+
+private LanzarError(error : Response)
+  
+{
+    
+return error;
+  
+}
+

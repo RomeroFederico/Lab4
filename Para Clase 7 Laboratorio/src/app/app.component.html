@@ -1,0 +1,24 @@
+
+<!-- onSubmit = "return false" previene que se cambie la pagina al presionar submit-->
+
+<!--<form onSubmit="return false" *ngIf="log">
+
+    <input type = 'text' placeholder = 'Nombre' name = "nombre" [(ngModel)]="form.nombre">
+
+    <input type = "submit" (click) = "Subir()">
+
+</form>-->
+
+<!--<ul>
+  Personas: 
+  <li *ngFor = "let item of personas; let i = index; let f = first; let l = last; let e = even; let o = odd">
+    {{item.nombre}},  {{item.edad}},  {{item.email}} {{i}} {{f}} {{l}} {{e}} {{o}}
+  </li>
+</ul>-->
+
+<a routerLink="/prueba" routerLinkActive="active" (click) = "MostrarEvento($event)">Prueba para Practicar</a>
+<a routerLink="/tabla" routerLinkActive="active" (click) = "MostrarEvento($event)">Mostrar Tabla</a>
+<router-outlet></router-outlet>
+
+<!--<ng2-smart-table [settings] = "settings" [source] = "source" (editConfirm) = "Editar($event)"  (deleteConfirm) = "Eliminar($event)" (createConfirm) = "Agregar($event)">
+</ng2-smart-table>-->

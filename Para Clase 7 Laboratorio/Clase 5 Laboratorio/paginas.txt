@@ -1,0 +1,9 @@
+https://mockaroo.com/
+
+http://www.mocky.io/
+
+
+
+service -> ngfor -> ngif / ngmode / ngstyle / (eventos) / img [src] src =
+
+api -> GET / GET con datos : PARAMETRO1/PARAMETRO2 // {JSON}

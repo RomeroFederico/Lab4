@@ -1,0 +1,23 @@
+Pasar datos:
+
+
+{{expresion}} => vista
+[propiedad] => vista
+(evento) => modelo
+[{expresion}] => modelo/vista
+
+
+
+
+
+{{expresion}}
+
+[propiedad] = "variable en ts", propiedad de los elementos html. Incluso con class.
+
+(eventos) = "funcion en ts"
+
+[(dobleBinding)]
+
+npm install --save ng2-smart-table
+
+http://www.lslutnfra.com/flisol/

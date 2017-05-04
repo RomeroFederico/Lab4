@@ -1,0 +1,34 @@
+<ion-header>
+
+ <ion-navbar hideBackButton color = "primary">
+    <ion-buttons left>
+      <button ion-button (click)="ConfirmarVolver()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-right>Pregunta #{{preguntaActual + 1}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class = "miClase">
+
+  <ion-card align = 'right' class = "miCard">
+    <ion-card-content class = 'txtPregunta'>
+      {{jugador.nombre}}, Puntaje : {{puntajePartida}}
+    </ion-card-content> 
+  </ion-card>
+
+  <ion-card align = 'center' class = "miCard">
+    <img src="assets/images/star.jpg"/>
+    <div class = "card-title">{{preguntaActualEnunciado}}</div>
+  </ion-card>
+
+  <ion-list *ngFor="let respuesta of respuestas; let i=index">
+
+    <button ion-button class = "juego-button" block color = "primary" disabled={{inhabilitarBotones}} (click) = "Seleccion(i)">{{respuesta}}</button>
+
+  </ion-list>
+
+</ion-content>

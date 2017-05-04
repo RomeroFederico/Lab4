@@ -1,0 +1,33 @@
+<br>
+<p>Agregar usuario:</p>
+Nombre : <input type="text" [(ngModel)]="persona.nombre"/><br>
+Apellido : <input type="text" [(ngModel)]="persona.apellido"/><br>
+Email : <input type = "text" [(ngModel)]="persona.email"/><br>
+Color : <input type = "text" [(ngModel)]="persona.color"/><br>
+
+<button (click) = "AgregarUsuario()">Agregar</button>
+
+<table style = "border: 1px solid black; width:100%; text-align: center;">
+<br>
+  <tr *ngIf = "personas.length > 0">
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+    <th>Color</th>
+    <th>Imagen</th>
+  </tr>
+      <tr *ngFor = "let item of personas; let e = even" div 
+      [ngStyle] = "e? { 'background-color' : 'white', 'color': item.color } : { 'background-color' : 'Beige ', 'color': item.color }"> <!-- ngFor es aplicable a cualquier elemento que liste, (li, tr) -->
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.color}}</td>
+        <td>
+          <img [src]="item.imagen" *ngIf = "item.imagen != null"/> <!-- atributo/variable donde esta la ruta de la imagen -->
+          <h4 *ngIf = "item.imagen == null">Sin imagen</h4>
+        </td>
+      </tr>
+
+</table>

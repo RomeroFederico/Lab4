@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar text-center color = "primary">
+    <ion-title>Resultado de la Partida</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class = "miClase">
+
+  <ion-card align = 'center' class = "miCard">
+    <ion-card-content>
+      Partida Finalizada!!!<br>
+      Puntaje : {{puntajePartida}}
+    </ion-card-content> 
+  </ion-card>
+
+  <ion-list>
+
+    <ion-item-group>
+      <ion-item-divider color="primary">Datos de la Partida</ion-item-divider>
+      <ion-item>Respuestas Correctas   : {{puntajePartida}}</ion-item>
+      <ion-item>Respuestas Incorrectas : {{3 - puntajePartida}}</ion-item>
+      <ion-item>Tiempo Transcurrido    : {{tiempo}}</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="primary">Datos del jugador</ion-item-divider>
+      <ion-item>Puntaje total          : {{jugador.puntaje}}</ion-item>
+      <ion-item>Partidas Jugadas       : {{jugador.partidasJugadas}}</ion-item>
+      <ion-item>Respuestas Correctas   : {{jugador.respCorrectas}}</ion-item>
+      <ion-item>Respuestas Incorrectas : {{jugador.respIncorrectas}}</ion-item>
+    </ion-item-group>
+
+  </ion-list>
+
+  <button ion-button block class = "resultado-button" color = "primary" (click) = "Volver()">Volver al Menu Principal</button>
+
+</ion-content>
